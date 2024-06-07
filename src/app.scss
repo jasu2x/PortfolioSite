@@ -1,0 +1,24 @@
+.app{
+    height: 100vh;
+
+
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: lightsalmon;
+        position: relative;
+        top: 70px;
+        scroll-behavior: smooth; /*enables transition to different pages*/
+        scroll-snap-type: y mandatory; /*allows for the different pages to snap when you scroll down using bar, along with scroll snap align*/
+        scrollbar-width: none;  /*hides scroll bar*/
+        &::-webkit-scrollbar{   /*hides scroll bar for other browsers may no longer be necessary*/
+            display: none;
+        }
+
+        > *{
+            width: 100vw;
+            height: calc(100vh - 70px);  /*allows for the different color pages*/
+            scroll-snap-align: start;  /*here from scroll snap*/
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@import "../../global.scss";
+
+
+
+.intro{
+    background-color: white;
+    display: flex;
+
+    @include mobile{            /*for mobile devices*/
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left{
+        flex: 0.5;
+        overflow: hidden;
+
+        .imgContainer{
+            height: 700px;
+            width: 800px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            float: right;
+
+            @include mobile{
+
+                align-items: flex-start;
+            }
+            img{
+                width: 100%;
+
+                @include mobile{
+                    width: 80%;
+                    
+                }
+            }
+        }
+
+    }
+
+    .right{
+        flex: 0.5;
+        position: relative;   /*must be relative because child is going to be absolute*/
+
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            padding-left: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+            h1{
+                font-size: 60px;
+                margin: 10px 0;
+            }
+            h2{
+                font-size: 45px;
+                margin: 10px;
+            }
+            h3{
+                font-size: 30px;
+                color: $mainColor;
+
+                span{
+                    font-size: inherit;
+                    color: darkcyan;
+                }
+
+                .ityped-cursor{
+                    animation: blink 1s infinite;
+                }
+
+                @keyframes blink {
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        a{
+            position: absolute;
+            bottom: 10px;
+            /*
+            left: 50%;
+            */
+
+            img{
+                width: 30px;
+                animation: arrowBlink 5s infinite;
+            }
+
+            @keyframes arrowBlink {
+                to{
+                    opacity: 0;
+                }
+            }
+        }
+     
+    }
+
+}

@@ -1,0 +1,19 @@
+@import "../../global.scss";
+
+
+
+
+.portfolioList{         /*here is where we placed our li styling, changed the class name to portfolioList*/
+    font-size: 14px;
+    margin-right: 50px;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+
+   
+
+    &.active{
+        background-color: $mainColor;
+        color: white;
+    }
+}
